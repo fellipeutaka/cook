@@ -1,12 +1,13 @@
 import type { Recipes } from "@cook/@types/Recipes";
-import { Spinner } from "@cook/components/Spinner";
-import { Text } from "@cook/components/Text";
+import { Spinner } from "@cook/components/ui/Spinner";
+import { Text } from "@cook/components/ui/Text";
 import { useQuery } from "@tanstack/react-query";
-import { FlatList, ImageBackground, Pressable, View } from "react-native";
-import { Timer, ThumbsUp, MagnifyingGlass } from "phosphor-react-native";
-import * as TextField from "@cook/components/TextField";
+import { View } from "react-native";
+import { MagnifyingGlass } from "phosphor-react-native";
+import * as TextField from "@cook/components/ui/TextField";
 import { zinc } from "tailwindcss/colors";
-import { KeyboardAvoidingView } from "@cook/components/KeyboardAvoidingView";
+import { KeyboardAvoidingView } from "@cook/components/utils/KeyboardAvoidingView";
+import { RecipeList } from "@cook/components/ui/RecipeList";
 
 export function Home() {
   const { data, isLoading } = useQuery<Recipes>({
@@ -37,51 +38,7 @@ export function Home() {
             placeholder="Search by recipes"
           />
         </TextField.Root>
-        <FlatList
-          className="mt-6"
-          data={data?.results}
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={{ paddingBottom: 64 }}
-          renderItem={({ item }) => (
-            <Pressable
-              className="w-full h-64 relative mb-6"
-              onPressIn={() => console.log("onPressIn")}
-              onPressOut={() => console.log("onPressOut")}
-            >
-              <ImageBackground
-                className="flex-1 absolute inset-0 rounded-lg overflow-hidden"
-                source={{ uri: item.image }}
-                resizeMode="cover"
-              >
-                <View className="flex-1 justify-between px-4 py-6 bg-black/60">
-                  <View className="flex-row justify-between items-center">
-                    <Text className="text-white font-medium">
-                      {item.sourceName}
-                    </Text>
-                    <View className="flex-row items-center">
-                      <ThumbsUp color="white" />
-                      <Text className="text-white ml-1">
-                        {item.aggregateLikes}
-                      </Text>
-                    </View>
-                  </View>
-                  <View>
-                    <Text className="text-white text-xl font-semibold">
-                      {item.title}
-                    </Text>
-                    <View className="flex-row items-center mt-4">
-                      <Timer color="white" />
-                      <Text className="text-white ml-1">
-                        {item.readyInMinutes} min
-                      </Text>
-                    </View>
-                  </View>
-                </View>
-              </ImageBackground>
-            </Pressable>
-          )}
-          keyExtractor={({ id }) => String(id)}
-        />
+        <RecipeList data={data} />
       </View>
     </KeyboardAvoidingView>
   );

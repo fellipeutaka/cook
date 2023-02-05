@@ -1,14 +1,41 @@
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import type { RootTabsParamList } from "@cook/@types/RootTabsParamList";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { House } from "phosphor-react-native";
+import { green, zinc } from "tailwindcss/colors";
+import { HomeStack } from "./stacks/home.stack";
 
-import type { RootStackParamList } from "@cook/@types/RootStackParamList";
-import { Home } from "@cook/screens/Home";
-
-const { Navigator, Screen } = createNativeStackNavigator<RootStackParamList>();
+const { Navigator, Screen } = createBottomTabNavigator<RootTabsParamList>();
 
 export function AppRoutes() {
   return (
-    <Navigator screenOptions={{ headerShown: false }}>
-      <Screen name="home" component={Home} />
+    <Navigator
+      safeAreaInsets={{
+        bottom: 8,
+      }}
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: {
+          height: 64,
+          paddingVertical: 4,
+          backgroundColor: zinc[900],
+          borderTopWidth: 0,
+        },
+        tabBarLabelStyle: {
+          fontSize: 12,
+          fontWeight: "600",
+        },
+        tabBarActiveTintColor: green[600],
+      }}
+    >
+      <Screen
+        name="Home"
+        component={HomeStack}
+        options={{
+          tabBarIcon: ({ focused, ...props }) => (
+            <House weight="fill" {...props} />
+          ),
+        }}
+      />
     </Navigator>
   );
 }
