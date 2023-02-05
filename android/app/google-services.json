@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "143446230532",
+    "project_id": "cook-47ac1",
+    "storage_bucket": "cook-47ac1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143446230532:android:55dfe1d016b37d59e9d751",
+        "android_client_info": {
+          "package_name": "com.fellipeutaka.cook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "143446230532-lt165te1oi0s4udie9tg4ubi6osfaiil.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkiXR5tDaWDZP4ZW4cr-u7_JgvukcgYdg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "143446230532-kbgfk76p8il9klg7f0djhrd0kdpt7f4r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "143446230532-ppcpmq3frdtl92i0ncu52d9ee5kh4icn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fellipeutaka.cook"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
