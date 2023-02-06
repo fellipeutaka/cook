@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "cook",
+    "name": "Cook",
     "slug": "cook",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#65A30D"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -23,7 +23,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#65A30D"
       },
       "googleServicesFile": "./google-services.json",
       "package": "com.fellipeutaka.cook"
