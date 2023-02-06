@@ -1,6 +1,7 @@
 import type { RootTabsParamList } from "@cook/@types/RootTabsParamList";
+import { Favorites } from "@cook/screens/Favorites";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { House } from "phosphor-react-native";
+import { Heart, House } from "phosphor-react-native";
 import { green, zinc } from "tailwindcss/colors";
 import { HomeStack } from "./stacks/home.stack";
 
@@ -33,6 +34,15 @@ export function AppRoutes() {
         options={{
           tabBarIcon: ({ focused, ...props }) => (
             <House weight="fill" {...props} />
+          ),
+        }}
+      />
+      <Screen
+        name="Favorites"
+        component={Favorites}
+        options={{
+          tabBarIcon: ({ focused, ...props }) => (
+            <Heart weight="fill" {...props} />
           ),
         }}
       />

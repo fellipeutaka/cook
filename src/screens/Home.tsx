@@ -11,14 +11,16 @@ import { RecipeList } from "@cook/components/ui/RecipeList";
 import { useAuth } from "@cook/hooks/useAuth";
 import { Avatar } from "@cook/components/ui/Avatar";
 import auth from "@react-native-firebase/auth";
+import { useFavorites } from "@cook/hooks/useFavorites";
 
 export function Home() {
   const { user } = useAuth();
+  const { favorites, isLoading: isFavoritesLoading } = useFavorites(user);
   const { data, isLoading } = useQuery<Recipes>({
     queryKey: ["/recipes/complexSearch?number=4&addRecipeInformation=true"],
   });
 
-  if (isLoading) {
+  if (isLoading || isFavoritesLoading) {
     return (
       <View className="flex-1 justify-center items-center">
         <Spinner />
@@ -49,7 +51,7 @@ export function Home() {
             placeholder="Search by recipes"
           />
         </TextField.Root>
-        <RecipeList data={data} />
+        <RecipeList data={data} favorites={favorites} />
       </View>
     </KeyboardAvoidingView>
   );

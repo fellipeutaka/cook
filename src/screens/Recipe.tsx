@@ -12,11 +12,14 @@ import { useState } from "react";
 import { Dimensions, ImageBackground, ScrollView, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import RenderHtml from "react-native-render-html";
+import firestore from "@react-native-firebase/firestore";
+import { useAuth } from "@cook/hooks/useAuth";
 
 const width = Dimensions.get("window").width;
 
 export function Recipe() {
   const select = useSelectColor();
+  const { user } = useAuth();
   const { goBack } = useNavigation();
   const { params } = useRoute<RouteProp<HomeStackParamList, "Recipe">>();
   const { data, isLoading } = useQuery<Recipe>({
@@ -27,6 +30,30 @@ export function Recipe() {
     staleTime: Infinity,
   });
   const [isIngredientsActive, setIsIngredientsActive] = useState(true);
+  const [isFavorited, setIsFavorited] = useState(params.hasAlreadyFavorited);
+
+  async function handleAddToFavorites() {
+    try {
+      if (isFavorited) {
+        const newFavoritesList = params.favorites.filter(
+          (favorite) => favorite !== params.id
+        );
+        setIsFavorited(false);
+        await firestore()
+          .collection("users")
+          .doc(user?.uid)
+          .update("favorites", newFavoritesList);
+      } else {
+        setIsFavorited(true);
+        await firestore()
+          .collection("users")
+          .doc(user?.uid)
+          .update("favorites", [params.id, ...params.favorites]);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  }
 
   return (
     <ScrollView>
@@ -39,8 +66,14 @@ export function Recipe() {
             >
               <X color={select("white", "black")} />
             </TouchableOpacity>
-            <TouchableOpacity className="bg-zinc-200 dark:bg-zinc-800 p-2 rounded-xl">
-              <Heart color={select("white", "black")} />
+            <TouchableOpacity
+              className="bg-zinc-200 dark:bg-zinc-800 p-2 rounded-xl"
+              onPress={handleAddToFavorites}
+            >
+              <Heart
+                weight={isFavorited ? "fill" : "regular"}
+                color={select("white", "black")}
+              />
             </TouchableOpacity>
           </View>
         </ImageBackground>

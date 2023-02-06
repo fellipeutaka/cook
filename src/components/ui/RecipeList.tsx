@@ -1,18 +1,16 @@
-import { HomeStackParamList } from "@cook/@types/HomeStackParamList";
 import type { Recipes } from "@cook/@types/Recipes";
-import { useNavigation } from "@react-navigation/native";
 import { ThumbsUp, Clock } from "phosphor-react-native";
 import { FlatList, ImageBackground, Pressable, View } from "react-native";
 import { Text } from "./Text";
-import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { useHomeNavigation } from "@cook/hooks/useHomeNavigation";
 
 type RecipeListProps = {
   data?: Recipes;
+  favorites: string[];
 };
 
-export function RecipeList({ data }: RecipeListProps) {
-  const { navigate } =
-    useNavigation<NativeStackNavigationProp<HomeStackParamList>>();
+export function RecipeList({ data, favorites }: RecipeListProps) {
+  const { navigate } = useHomeNavigation();
 
   return (
     <FlatList
@@ -29,6 +27,8 @@ export function RecipeList({ data }: RecipeListProps) {
               id: String(item.id),
               title: item.title,
               imageUrl: item.image,
+              favorites,
+              hasAlreadyFavorited: favorites.includes(String(item.id)),
             })
           }
         >

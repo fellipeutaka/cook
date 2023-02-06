@@ -5,6 +5,7 @@ specifiers:
   '@react-native-community/netinfo': 9.3.5
   '@react-native-firebase/app': ^17.0.0
   '@react-native-firebase/auth': ^17.0.0
+  '@react-native-firebase/firestore': ^17.0.0
   '@react-native-google-signin/google-signin': ^9.0.2
   '@react-navigation/bottom-tabs': ^6.5.4
   '@react-navigation/native': ^6.1.3
@@ -41,6 +42,7 @@ dependencies:
   '@react-native-community/netinfo': 9.3.5_react-native@0.70.5
   '@react-native-firebase/app': 17.0.0_tj3nonr5gneraukzjkxpsiy7yu
   '@react-native-firebase/auth': 17.0.0_b63wzqbjhhcxqhiyholuwkx4zu
+  '@react-native-firebase/firestore': 17.0.0_b63wzqbjhhcxqhiyholuwkx4zu
   '@react-native-google-signin/google-signin': 9.0.2_poeldtlpycma2zpufaeamqe6qa
   '@react-navigation/bottom-tabs': 6.5.4_n7nfmwp46ciroegwuwzxnskohy
   '@react-navigation/native': 6.1.3_tj3nonr5gneraukzjkxpsiy7yu
@@ -2220,6 +2222,14 @@ packages:
       plist: 3.0.6
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@react-native-firebase/firestore/17.0.0_b63wzqbjhhcxqhiyholuwkx4zu:
+    resolution: {integrity: sha512-0/4UWq0LmIHmjXBDwtfMo1uxsM8cjD+2P8XOt8H+S/KKExXGpEBT7QQEdMXD98H5PmbMbBiywfA5RSsQAco63A==}
+    peerDependencies:
+      '@react-native-firebase/app': 17.0.0
+    dependencies:
+      '@react-native-firebase/app': 17.0.0_tj3nonr5gneraukzjkxpsiy7yu
     dev: false
 
   /@react-native-google-signin/google-signin/9.0.2_poeldtlpycma2zpufaeamqe6qa:

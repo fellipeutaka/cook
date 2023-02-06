@@ -4,5 +4,7 @@ export type HomeStackParamList = {
     id: string;
     title: string;
     imageUrl: string;
+    favorites: string[];
+    hasAlreadyFavorited: boolean;
   };
 };
