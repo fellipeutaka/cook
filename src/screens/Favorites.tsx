@@ -39,6 +39,10 @@ export function Favorites() {
     }
   }
 
+  if (favoriteList.length === 0) {
+    return <EmptyFavorites />;
+  }
+
   return (
     <View className="flex-1 px-4 pt-16">
       <Text className="text-2xl font-bold text-green-700 mb-1">
@@ -63,7 +67,6 @@ export function Favorites() {
             contentContainerStyle={{ paddingBottom: 64, paddingRight: 16 }}
             numColumns={2}
             horizontal={false}
-            ListEmptyComponent={EmptyFavorites}
             renderItem={({ item }) => (
               <Pressable
                 className="w-1/2 h-32 relative mb-6 mr-4"

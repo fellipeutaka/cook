@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "cook.app"
-               BlueprintName = "cook"
-               ReferencedContainer = "container:cook.xcodeproj">
+               BuildableName = "Cook.app"
+               BlueprintName = "Cook"
+               ReferencedContainer = "container:Cook.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "cookTests.xctest"
-               BlueprintName = "cookTests"
-               ReferencedContainer = "container:cook.xcodeproj">
+               BuildableName = "CookTests.xctest"
+               BlueprintName = "CookTests"
+               ReferencedContainer = "container:Cook.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "cook.app"
-            BlueprintName = "cook"
-            ReferencedContainer = "container:cook.xcodeproj">
+            BuildableName = "Cook.app"
+            BlueprintName = "Cook"
+            ReferencedContainer = "container:Cook.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "cook.app"
-            BlueprintName = "cook"
-            ReferencedContainer = "container:cook.xcodeproj">
+            BuildableName = "Cook.app"
+            BlueprintName = "Cook"
+            ReferencedContainer = "container:Cook.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

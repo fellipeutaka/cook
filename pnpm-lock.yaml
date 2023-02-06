@@ -21,6 +21,7 @@ specifiers:
   expo-dev-client: ~2.0.1
   expo-splash-screen: ~0.17.5
   expo-status-bar: ~1.4.2
+  expo-system-ui: ~2.0.1
   nativewind: ^2.0.11
   phosphor-react-native: ^1.1.2
   react: 18.1.0
@@ -36,7 +37,7 @@ specifiers:
   react-native-svg: 13.4.0
   react-native-web: ~0.18.9
   tailwindcss: ^3.2.4
-  typescript: ^4.6.3
+  typescript: ^4.9.5
 
 dependencies:
   '@react-native-community/netinfo': 9.3.5_react-native@0.70.5
@@ -54,6 +55,7 @@ dependencies:
   expo-dev-client: 2.0.1_expo@47.0.13
   expo-splash-screen: 0.17.5_expo@47.0.13
   expo-status-bar: 1.4.2
+  expo-system-ui: 2.0.1_expo@47.0.13
   nativewind: 2.0.11_f3xea42f6zrwqyr5c6mbkdauxa
   phosphor-react-native: 1.1.2_sbjwcymhxojgo3gfi375f2jjkm
   react: 18.1.0
@@ -4019,6 +4021,18 @@ packages:
 
   /expo-status-bar/1.4.2:
     resolution: {integrity: sha512-ZWjO6D4ARGYfAd3SWDD3STNudHDhyBZDZjhhseqoEmsf7bS9ykny8KKOhlzJW24qIQNPhkgdvHhaw9fQwMJy3Q==}
+    dev: false
+
+  /expo-system-ui/2.0.1_expo@47.0.13:
+    resolution: {integrity: sha512-lspSKU71G2+6y3kI/p/sZUFSBvzd5HdnKuSX0J6b4yqOEAhMIA4JtmkU/0as1FY1Fnz+48fLs2ZL9gzbr7+njA==}
+    peerDependencies:
+      expo: '*'
+    dependencies:
+      '@react-native/normalize-color': 2.1.0
+      debug: 4.3.4
+      expo: 47.0.13_@babel+core@7.20.12
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /expo-updates-interface/0.8.1_expo@47.0.13:

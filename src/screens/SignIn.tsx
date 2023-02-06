@@ -68,7 +68,7 @@ export function SignIn() {
         }}
         loop
         autoPlay
-        defaultIndex={3}
+        defaultIndex={carouselData.length - 1}
         scrollAnimationDuration={1000}
         autoPlayReverse
         renderItem={({ item }) => (
