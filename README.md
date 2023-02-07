@@ -49,15 +49,15 @@
 An app to help people find new recipes.
 
 <h1 align="center">
-  <img alt="Preview" src=".github/docs/screenshots/app-in-homescreen.jpg" width="500px" />
-  <img alt="Preview" src=".github/docs/screenshots/splash-screen.jpg" width="500px" />
-  <img alt="Preview" src=".github/docs/screenshots/sign-in.jpg" width="500px" />
-  <img alt="Preview" src=".github/docs/screenshots/home.jpg" width="500px" />
-  <img alt="Preview" src=".github/docs/screenshots/recipe.jpg" width="500px" />
-  <img alt="Preview" src=".github/docs/screenshots/recipe-ingredients.jpg" width="500px" />
-  <img alt="Preview" src=".github/docs/screenshots/recipe-instructions.jpg" width="500px" />
-  <img alt="Preview" src=".github/docs/screenshots/favorites-empty.jpg" width="500px" />
-  <img alt="Preview" src=".github/docs/screenshots/favorites.jpg" width="500px" />
+  <img alt="Preview" src=".github/docs/screenshots/app-in-homescreen.jpg" width="250px" />
+  <img alt="Preview" src=".github/docs/screenshots/splash-screen.jpg" width="250px" />
+  <img alt="Preview" src=".github/docs/screenshots/sign-in.jpg" width="250px" />
+  <img alt="Preview" src=".github/docs/screenshots/home.jpg" width="250px" />
+  <img alt="Preview" src=".github/docs/screenshots/recipe.jpg" width="250px" />
+  <img alt="Preview" src=".github/docs/screenshots/recipe-ingredients.jpg" width="250px" />
+  <img alt="Preview" src=".github/docs/screenshots/recipe-instructions.jpg" width="250px" />
+  <img alt="Preview" src=".github/docs/screenshots/favorites-empty.jpg" width="250px" />
+  <img alt="Preview" src=".github/docs/screenshots/favorites.jpg" width="250px" />
 </h1>
 
 ## 🚀 Technologies
@@ -130,6 +130,7 @@ Made with ♥ by Fellipe Utaka 👋 [Get in touch!](https://www.linkedin.com/in/
 [ts]: https://www.typescriptlang.org/
 [react]: https://reactjs.org
 [rn]: https://reactnative.dev/
+[expo]: https://docs.expo.dev/
 [react-query]: https://tanstack.com/query/latest
 [react-navigation]: https://reactnavigation.org/
 [react-reanimated-v2]: https://docs.swmansion.com/react-native-reanimated/
