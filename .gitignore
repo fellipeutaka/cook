@@ -9,9 +9,15 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
+android/
+ios/
 
 # macOS
 .DS_Store
 
 # Environment variables
 .env
+
+# Firebase config
+GoogleService-Info.plist
+google-services.json
