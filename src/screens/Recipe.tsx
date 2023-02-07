@@ -11,7 +11,7 @@ import { clsx } from "clsx";
 import { X, Heart, Leaf, Fire, Pizza, Egg } from "phosphor-react-native";
 
 import { HomeStackParamList } from "@cook/@types/HomeStackParamList";
-import { Recipe } from "@cook/@types/Recipe";
+import type { Recipe as IRecipe } from "@cook/@types/Recipe";
 import { Spinner } from "@cook/components/ui/Spinner";
 import { Text } from "@cook/components/ui/Text";
 import { useAuth } from "@cook/hooks/useAuth";
@@ -24,7 +24,7 @@ export function Recipe() {
   const { user } = useAuth();
   const { goBack } = useNavigation();
   const { params } = useRoute<RouteProp<HomeStackParamList, "Recipe">>();
-  const { data, isLoading } = useQuery<Recipe>({
+  const { data, isLoading } = useQuery<IRecipe>({
     queryKey: [
       `/recipes/${params.id}/information?includeNutrition=true`,
       params.id,
