@@ -1,7 +1,9 @@
-import { useAuth } from "@cook/hooks/useAuth";
-import { getInitialLetterOfName } from "@cook/utils/getInitialLetterOfName";
 import { Else, If, Then } from "react-if";
 import { Image, View } from "react-native";
+
+import { useAuth } from "@cook/hooks/useAuth";
+import { getInitialLetterOfName } from "@cook/utils/getInitialLetterOfName";
+
 import { Text } from "./Text";
 
 export function Avatar() {

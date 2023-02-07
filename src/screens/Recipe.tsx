@@ -1,19 +1,21 @@
-import { HomeStackParamList } from "@cook/@types/HomeStackParamList";
-import type { Recipe } from "@cook/@types/Recipe";
-import { Spinner } from "@cook/components/ui/Spinner";
-import { Text } from "@cook/components/ui/Text";
+import { useState } from "react";
 import { If, Then, Else } from "react-if";
-import { useSelectColor } from "@cook/hooks/useSelectColor";
+import { Dimensions, ImageBackground, ScrollView, View } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import RenderHtml from "react-native-render-html";
+
+import firestore from "@react-native-firebase/firestore";
 import { RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import { useQuery } from "@tanstack/react-query";
 import { clsx } from "clsx";
 import { X, Heart, Leaf, Fire, Pizza, Egg } from "phosphor-react-native";
-import { useState } from "react";
-import { Dimensions, ImageBackground, ScrollView, View } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
-import RenderHtml from "react-native-render-html";
-import firestore from "@react-native-firebase/firestore";
+
+import { HomeStackParamList } from "@cook/@types/HomeStackParamList";
+import { Recipe } from "@cook/@types/Recipe";
+import { Spinner } from "@cook/components/ui/Spinner";
+import { Text } from "@cook/components/ui/Text";
 import { useAuth } from "@cook/hooks/useAuth";
+import { useSelectColor } from "@cook/hooks/useSelectColor";
 
 const width = Dimensions.get("window").width;
 

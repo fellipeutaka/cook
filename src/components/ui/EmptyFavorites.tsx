@@ -1,8 +1,11 @@
-import { useHomeNavigation } from "@cook/hooks/useHomeNavigation";
-import { Eye } from "phosphor-react-native";
 import { View } from "react-native";
-import { Text } from "./Text";
+
+import { Eye } from "phosphor-react-native";
+
+import { useHomeNavigation } from "@cook/hooks/useHomeNavigation";
+
 import { Button, ButtonText } from "./Button";
+import { Text } from "./Text";
 
 export function EmptyFavorites() {
   const { navigate } = useHomeNavigation();

@@ -1,14 +1,17 @@
-import { useSelectColor } from "@cook/hooks/useSelectColor";
+import { Else, If, Then } from "react-if";
+
 import {
   DefaultTheme,
   NavigationContainer,
   Theme,
 } from "@react-navigation/native";
-import { Else, If, Then } from "react-if";
 import { zinc } from "tailwindcss/colors";
+
+import { useAuth } from "@cook/hooks/useAuth";
+import { useSelectColor } from "@cook/hooks/useSelectColor";
+
 import { AppRoutes } from "./app.routes";
 import { AuthRoutes } from "./auth.routes";
-import { useAuth } from "@cook/hooks/useAuth";
 
 export function Routes() {
   const { user } = useAuth();

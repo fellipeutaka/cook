@@ -1,15 +1,16 @@
-import { Text } from "@cook/components/ui/Text";
-import { useSelectColor } from "@cook/hooks/useSelectColor";
-import { AppleLogo, GoogleLogo } from "phosphor-react-native";
 import { Dimensions, Image, TouchableOpacity, View } from "react-native";
-import { GoogleSignin } from "@react-native-google-signin/google-signin";
-import auth from "@react-native-firebase/auth";
 import Carousel from "react-native-reanimated-carousel";
 
-import pizza from "@cook/assets/images/pizza.jpg";
+import auth from "@react-native-firebase/auth";
+import { GoogleSignin } from "@react-native-google-signin/google-signin";
+import { AppleLogo, GoogleLogo } from "phosphor-react-native";
+
 import hamburger from "@cook/assets/images/hamburger.jpeg";
-import soup from "@cook/assets/images/soup.jpg";
 import lemonade from "@cook/assets/images/lemonade.jpg";
+import pizza from "@cook/assets/images/pizza.jpg";
+import soup from "@cook/assets/images/soup.jpg";
+import { Text } from "@cook/components/ui/Text";
+import { useSelectColor } from "@cook/hooks/useSelectColor";
 
 const carouselData = [pizza, hamburger, lemonade, soup];
 

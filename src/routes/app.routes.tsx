@@ -1,8 +1,10 @@
-import type { RootTabsParamList } from "@cook/@types/RootTabsParamList";
-import { Favorites } from "@cook/screens/Favorites";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Heart, House } from "phosphor-react-native";
 import { green, zinc } from "tailwindcss/colors";
+
+import type { RootTabsParamList } from "@cook/@types/RootTabsParamList";
+import { Favorites } from "@cook/screens/Favorites";
+
 import { HomeStack } from "./stacks/home.stack";
 
 const { Navigator, Screen } = createBottomTabNavigator<RootTabsParamList>();

@@ -4,6 +4,7 @@ import {
   QueryClientProvider,
   onlineManager,
 } from "@tanstack/react-query";
+
 import { api } from "./axios";
 
 export const queryClient = new QueryClient({

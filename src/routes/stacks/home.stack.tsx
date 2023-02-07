@@ -1,7 +1,8 @@
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import { HomeStackParamList } from "@cook/@types/HomeStackParamList";
 import { Home } from "@cook/screens/Home";
 import { Recipe } from "@cook/screens/Recipe";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const { Navigator, Screen } = createNativeStackNavigator<HomeStackParamList>();
 

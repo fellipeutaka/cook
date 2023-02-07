@@ -1,7 +1,5 @@
-import type { Recipes, Result } from "@cook/@types/Recipes";
-import { Spinner } from "@cook/components/ui/Spinner";
-import { Text } from "@cook/components/ui/Text";
-import { useInfiniteQuery } from "@tanstack/react-query";
+import { useCallback } from "react";
+import { If, Then } from "react-if";
 import {
   FlatList,
   ImageBackground,
@@ -10,24 +8,28 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+
+import auth from "@react-native-firebase/auth";
+import { useInfiniteQuery } from "@tanstack/react-query";
 import {
   ArrowsClockwise,
   Clock,
   MagnifyingGlass,
   ThumbsUp,
 } from "phosphor-react-native";
-import * as TextField from "@cook/components/ui/TextField";
 import { zinc } from "tailwindcss/colors";
+
+import type { Recipes, Result } from "@cook/@types/Recipes";
+import { Avatar } from "@cook/components/ui/Avatar";
+import { Button, ButtonText } from "@cook/components/ui/Button";
+import { Spinner } from "@cook/components/ui/Spinner";
+import { Text } from "@cook/components/ui/Text";
+import * as TextField from "@cook/components/ui/TextField";
 import { KeyboardAvoidingView } from "@cook/components/utils/KeyboardAvoidingView";
 import { useAuth } from "@cook/hooks/useAuth";
-import { Avatar } from "@cook/components/ui/Avatar";
-import auth from "@react-native-firebase/auth";
 import { useFavorites } from "@cook/hooks/useFavorites";
-import { Button, ButtonText } from "@cook/components/ui/Button";
-import { useCallback } from "react";
-import { api } from "@cook/lib/axios";
 import { useHomeNavigation } from "@cook/hooks/useHomeNavigation";
-import { If, Then } from "react-if";
+import { api } from "@cook/lib/axios";
 
 export function Home() {
   const { user } = useAuth();

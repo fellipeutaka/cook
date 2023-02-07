@@ -1,8 +1,3 @@
-import type { Result as Recipes } from "@cook/@types/Recipes";
-import { Spinner } from "@cook/components/ui/Spinner";
-import { Text } from "@cook/components/ui/Text";
-import { useQueries, UseQueryOptions } from "@tanstack/react-query";
-import { Heart } from "phosphor-react-native";
 import { Else, If, Then } from "react-if";
 import {
   FlatList,
@@ -11,11 +6,18 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { useFavorites } from "@cook/hooks/useFavorites";
-import { useAuth } from "@cook/hooks/useAuth";
-import { useHomeNavigation } from "@cook/hooks/useHomeNavigation";
-import { EmptyFavorites } from "@cook/components/ui/EmptyFavorites";
+
 import firestore from "@react-native-firebase/firestore";
+import { useQueries, UseQueryOptions } from "@tanstack/react-query";
+import { Heart } from "phosphor-react-native";
+
+import type { Result as Recipes } from "@cook/@types/Recipes";
+import { EmptyFavorites } from "@cook/components/ui/EmptyFavorites";
+import { Spinner } from "@cook/components/ui/Spinner";
+import { Text } from "@cook/components/ui/Text";
+import { useAuth } from "@cook/hooks/useAuth";
+import { useFavorites } from "@cook/hooks/useFavorites";
+import { useHomeNavigation } from "@cook/hooks/useHomeNavigation";
 
 export function Favorites() {
   const { user } = useAuth();

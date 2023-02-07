@@ -1,6 +1,7 @@
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import { AuthStackParamList } from "@cook/@types/AuthStackParamList";
 import { SignIn } from "@cook/screens/SignIn";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const { Navigator, Screen } = createNativeStackNavigator<AuthStackParamList>();
 

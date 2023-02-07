@@ -1,6 +1,7 @@
+import { useEffect, useState } from "react";
+
 import { FirebaseAuthTypes } from "@react-native-firebase/auth";
 import firestore from "@react-native-firebase/firestore";
-import { useEffect, useState } from "react";
 
 export function useFavorites(user: FirebaseAuthTypes.User | null) {
   const [favorites, setFavorites] = useState<string[]>([]);

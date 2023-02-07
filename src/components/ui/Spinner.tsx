@@ -1,4 +1,5 @@
 import { ActivityIndicator, ActivityIndicatorProps } from "react-native";
+
 import { green } from "tailwindcss/colors";
 
 export type SpinnerProps = ActivityIndicatorProps;
